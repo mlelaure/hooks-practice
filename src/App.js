@@ -1,11 +1,11 @@
 import React from 'react';
-import FrameworkList from './components/FrameworkList';
+import PostList from './components/PostList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FrameworkList />
+        <PostList />
       </header>
     </div>
   );
