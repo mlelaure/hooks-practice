@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const Like = () => {
   let [nbOfLikes, setNbOfLikes] = useState(0);
-  
   return (
     <div>
       {nbOfLikes}
