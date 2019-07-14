@@ -3,13 +3,13 @@ import React, { useReducer, useState } from 'react';
 const calculatorReducer = (state, action) => {
   switch (action.type) {
     case 'ADD':
-      return {...state, a: action.a, b: action.b, total: action.a + action.b, operation: 'ADD' };
+      return { a: action.a, b: action.b, total: action.a + action.b, operation: 'ADD' };
     case 'MULTIPLY':
-      return {...state, a: action.a, b: action.b, total: action.a * action.b, operation: 'MULT' };
+      return { a: action.a, b: action.b, total: action.a * action.b, operation: 'MULT' };
     case 'DIVIDE':
-      return {...state, a: action.a, b: action.b, total: action.a / action.b, operation: 'DIV' };
+      return { a: action.a, b: action.b, total: action.a / action.b, operation: 'DIV' };
     case 'RESET':
-      return {...state, a: 0, b: 0, total: 0, operation: 'RESET'};
+      return { a: 0, b: 0, total: 0, operation: 'RESET'};
     default:
       return state;
   }
