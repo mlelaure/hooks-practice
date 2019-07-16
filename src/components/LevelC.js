@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { MailContext } from './../contexts/MailContext';
 
 const LevelC = () => {
-  const messages = useContext(MailContext);
+  const {messages, deleteMessage} = useContext(MailContext);
   const messageSingularOrPlural = messages.length > 1 ? 'messages' : 'message';
   return (
     <div className="level-c">
@@ -13,7 +13,7 @@ const LevelC = () => {
         {
           messages.length > 0 ? (
             <ul>
-              { messages.map(msg => <li key={msg.id}>{msg.title}</li>)}
+              { messages.map(msg => <li key={msg.id}>{msg.title} <button onClick={() => deleteMessage(msg)}>del</button></li>)}
             </ul>
           ) : (
             <h3>no message</h3>
