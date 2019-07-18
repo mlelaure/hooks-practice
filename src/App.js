@@ -1,14 +1,11 @@
 import React from 'react';
-import LevelA from './components/LevelA';
-import MailContextProvider from './contexts/MailContext';
+import Keycode from './components/Keycode';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MailContextProvider>
-          <LevelA />
-        </MailContextProvider>
+        <Keycode />
       </header>
     </div>
   );
