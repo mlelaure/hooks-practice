@@ -1,11 +1,11 @@
 import React from 'react';
-import Keycode from './components/Keycode';
+import Pot from './components/Pot';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Keycode />
+        <Pot />
       </header>
     </div>
   );
