@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import {useLocalStorage} from 'react-use';
 
 const Pot = () => {
   const [firstName, setFirstName] = useState('');
@@ -7,14 +8,17 @@ const Pot = () => {
   const [users, setUsers] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [total, setTotal] = useState(0);
+  const [usersInStorage, setUsersInStorage] = useLocalStorage('users');
   const firstNameRef = useRef();
   useEffect(() => {
     firstNameRef.current.focus();
+    setUsers(JSON.parse(usersInStorage));
   }, []);
   useEffect(() => {
     const total = users.reduce((acc, curr) => acc = acc + curr.amount, 0);
     setTotal(total);
-  }, [users]);
+    setUsersInStorage(JSON.stringify(users));
+  }, [users, setUsersInStorage]);
   const handleFirstName = e => {
     setFirstName(e.currentTarget.value)
   };
