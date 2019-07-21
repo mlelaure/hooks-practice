@@ -30,3 +30,8 @@ code {
 .key-code {
   font-size: 120px;
 }
+
+.input-size-error {
+  font-size: 11px;
+  color: red;
+}

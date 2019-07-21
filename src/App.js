@@ -1,11 +1,11 @@
 import React from 'react';
-import Pot from './components/Pot';
+import Text from './components/Text';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Pot />
+        <Text />
       </header>
     </div>
   );
