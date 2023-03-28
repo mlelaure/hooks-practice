@@ -10,7 +10,7 @@ const Keycode = () => {
   }
   useEffect(() => {
     document.addEventListener('keyup', getKeycode);
-    return () => document.removeEventListener('keyup');
+    return () => document.removeEventListener('keyup', getKeyCode);
   }, []);
   return (
     <>
